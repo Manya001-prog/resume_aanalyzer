@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Analyzer</title>
+</head>
+<body>
+  <h2>Upload Resume & Paste Job Description</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="resume" required><br><br>
+    <textarea name="jd" rows="8" cols="60" placeholder="Paste Job Description here..."></textarea><br><br>
+    <input type="submit" value="Analyze">
+  </form>
+  {% if score %}
+    <h3>Match Score: {{ score }}%</h3>
+  {% endif %}
+</body>
+</html>
